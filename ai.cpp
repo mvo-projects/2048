@@ -129,7 +129,7 @@ long long int getHeuristics(unsigned int **board)
 */	nbBlanks = countBlanks(board);
 	score *= (nbBlanks * nbBlanks);
 //	score -= score_diff;
-	score /= (chk_monotonic(board) + 1);
+	score /= (minNotOrdered(board) + 1);
 	return (score);
 	//return (nbBlanks * nbBlanks * score * searchBestValue(board) / (chk_monotonic(board) + 1)); /*- score_diff);*/
 }
